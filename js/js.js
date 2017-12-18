@@ -9,7 +9,7 @@ $(document).ready(function(){
 			url: url,
 			data: { },
 			success: function(data){
-				$('#targetElement').html(data);
+				$('#page-content').html(data);
 			}
 		});
 	}));
