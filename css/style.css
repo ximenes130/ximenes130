@@ -51,6 +51,10 @@ html,body{
 	} 
 }
 
+.hidden{
+	display: none;
+}
+
 .page-content {
 	min-height: 300px;
 }
