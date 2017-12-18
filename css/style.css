@@ -55,8 +55,12 @@ html,body{
 	min-height: 300px;
 }
 
+.progress{
+	transform: translateY(-14px);
+}
+
 .tabs .tab a{
-	color:#c5e1a5;
+	color:#81c784;
 	font-weight: bold;
 }
 .tabs .tab a:hover,.tabs .tab a.active {
