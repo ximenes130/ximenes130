@@ -1,0 +1,64 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+#rainbow-lines{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: black;
+	z-index: -100;
+}
+#navrow {
+	position: absolute;
+	bottom: -20px;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.5);
+}
+.header .content{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	text-align: center;
+}
+.header .content img{
+	height: 275px;
+} 
+@media screen and (min-width: 768px){
+	.header .content h4{
+		position: absolute;
+		bottom: 120px;
+	} 
+}
+@media screen and (max-width: 768px){
+	.header .content h4{
+		position: absolute;
+		bottom: 80px;
+	} 
+}
+@media screen and (max-width: 425px){
+	.header .content h4{
+		position: absolute;
+		bottom: 50px;
+	} 
+}
+
+.tabs .tab a{
+	color:#c5e1a5;
+	font-weight: bold;
+}
+.tabs .tab a:hover,.tabs .tab a.active {
+	background-color:transparent;
+	color:#42a5f5;
+}
+.tabs .tab.disabled a,.tabs .tab.disabled a:hover {
+	color:rgba(102,147,153,0.7);	
+}
+.tabs .indicator {
+	background-color:#42a5f5;
+}

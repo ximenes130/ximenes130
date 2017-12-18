@@ -1,0 +1,1 @@
+$('.header .content').css('height', rainbowlines.height);
