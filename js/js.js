@@ -3,12 +3,14 @@ $(document).ready(function(){
 
 	if(document.location.hash != '')
 		loadPCUrl(jQuery.Event("click"), document.location.hash);
+	else
+		loadPCUrl(jQuery.Event("click"), '#sobre');
 	
 	$(document).on('click', '.tab', loadPC);
 });
 
 var loadPC = function(e){
-	loadPCUrl(e,$(this).find('a').attr('href'));
+	loadPCUrl(e, $(this).find('a').attr('href'));
 };
 var loadPCUrl = function(e, url){
 	$('.progress').css('opacity', '1');
