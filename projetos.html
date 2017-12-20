@@ -1,4 +1,108 @@
-<div>
-	<h1>Testando o ajax</h1>
-	<p>Secção sobre</p>
+<div class="section">
+	<h5>Android</h5>
 </div>
+
+<div class="row">
+	<div class="col s12 m6 l4">
+		<div class="card">
+			<div class="card-image">
+				<img src="img/projetos/appidoso.png">
+				<a class="btn-floating halfway-fab waves-effect waves-light blue lighten-1 modal-trigger" data-target="modalappidoso">
+					<i class="material-icons">add</i>
+				</a>
+				<div id="modal1" class="modal bottom-sheet">
+					<div class="modal-content">
+						<h4>Modal Header</h4>
+						<p>A bunch of text</p>
+					</div>
+					<div class="modal-footer">
+						<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+					</div>
+				</div>
+			</div>
+			<div class="card-content">
+				<h5>App android para idosos</h5>
+				<p>Aplicativo para celular destinado à inclusão da terceira idade no meio digital</p>
+				<div class="chip">Android</div>
+				<div class="chip">Acessibilidade</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="divider"></div>
+<div class="section">
+	<h5>Web</h5>
+</div>
+
+<div class="row">
+	<div class="col s12 m6 l4">
+		<div class="card">
+			<div class="card-image">
+				<img src="img/projetos/sc&t.jpg">
+				<a class="btn-floating halfway-fab waves-effect waves-light blue lighten-1 modal-trigger" data-target="modalscet">
+					<i class="material-icons">add</i>
+				</a>
+			</div>
+			<div class="card-content">
+				<h5>SC&T</h5>
+				<p>Site do evento Semana de Ciencia e Tecnologia (SC&T), que ocorreu nos dias 12, 13 e 14 de junho de 2017, no Instituto Federal de Brasília (IFB) <i>campus</i> Taguatinga</p>
+				<div class="chip">web</div>
+				<div class="chip">JavaScript</div>
+				<div class="chip">Vue</div>
+				<div class="chip">Vuetify</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="divider"></div>
+<div class="section">
+	<h5>Java</h5>
+</div>
+
+<div class="divider"></div>
+<div class="section">
+	<h5>Python</h5>
+</div>
+
+<div class="divider"></div>
+<div class="section">
+	<h5>C#</h5>
+</div>
+
+<div class="divider"></div>
+<div class="section">
+	<h5>Educacional</h5>
+</div>
+
+<div id="modalappidoso" class="modal">
+	<div class="modal-content">
+		<h4>Aplicativo para celular destinado à inclusão da terceira idade no meio digital</h4>
+		<p>É fato, que a tecnologia evolui exponencialmente, afetando a complexidade no uso de dispositivos, o que frequentemente dificulta seu uso por pessoas com idade avançada. Considerando que até 2030, 13,44% da população Brasileira será composta por idosos [7], esse projeto buscou estudar, desenvolver, implementar e validar um aplicativo para smartphones Android, que soluciona alguns paradoxos de usabilidade, como: ter algo simples e fácil de usar, com a capacidade de realizar qualquer ação mais complexa[2][4].</p>
+		<p>Portanto, a partir da análise de literatura acadêmica pesquisada e através da pesquisa de campo, foram identificadas dificuldades e necessidades apresentadas pelo usuário idoso. Em sequência, com base na usabilidade [2][4] e estudos anteriores, foi implementado um aplicativo Android adaptado às necessidades de usuários com mais de 60 anos. E para finalizar, as proposições foram validadas a partir de um questionário, aplicado, em conjunto do aplicativo, a 44 pessoas, com idade entre 60 e 77 anos, e escolaridade entre ensino fundamental incompleto e pós-graduação completa.</p>
+		<p>Como resultado, foram abordados três principais problemas, sendo o primeiro o de visão, onde pessoas com 60 anos ou mais apresentam redução no campo de visão e de sensibilidade a contraste de cores [6]. As soluções propostas para essa dificuldade são: Botões grandes; Cores diferentes para cada botão e elemento; Distancia de cinco milímetros entre botões.</p> 
+		<p>Em seguida foi tratada a redução de habilidades motoras [6][5], por dificultar o uso de telas sensíveis ao toque, que está presente na maioria dos dispositivos do mercado. Sendo propostas as seguintes soluções: Vibração como resposta para ações [3]; Animações ao interagir com elementos da tela; Alterar cor de botão quando tocado.</p>
+		<p>Por ultimo, foi tratada a redução na capacidade de aprendizado dos idosos [1][5][6], que muitas vezes exige explicações sobre funcionalidades, ou como realiza-las. Resultando nas seguintes proposições: Ícones intuitivos; Vídeos para solução de duvidas frequentes; Interface com texto.</p>
+		<p>Concluindo, o presente trabalho compreende a apresentação de um aplicativo para smartphones, adaptado às necessidades de usuários na terceira idade, para facilitar o manuseio e, consequentemente, auxiliar na integração social. O aplicativo obteve avaliação satisfatória até o presente momento, e ações objetivando seu aperfeiçoamento continuam sendo realizadas e testadas em conjunto com o público alvo. O protótipo atual está disponível através do site do grupo de pesquisa.</p>
+	</div>
+	<div class="modal-footer">
+		<a class="modal-action modal-close waves-effect waves-green btn-flat ">Fechar</a>
+	</div>
+</div>
+
+<div id="modalscet" class="modal">
+	<div class="modal-content">
+		<h4>Semana se Ciencia e Tecnologia</h4>
+		<p>Nos dias 12, 13 e 14 de junho, o Instituto Federal de Brasília (IFB) campus Taguatinga sediou a I Semana de Ciência e Tecnologia (SC&T). Nessa oportunidade, estudantes, professores e pesquisadores discutiram ideias sobres diversos temas da Automação, Física e Computação. Para isso, o evento reuniu palestras, oficinas, workshops, rodas de conversas, exposições, protótipos de produtos e muito mais.</p>
+	</div>
+	<div class="modal-footer">
+		<a class="modal-action modal-close waves-effect waves-green btn-flat ">Fechar</a>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function () {
+		$('.modal').modal();
+	});
+</script>

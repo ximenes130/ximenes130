@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	$('.header .content').css('height', rainbowlines.height);
-	console.log(document.location.hash);
 
 	if(document.location.hash != '')
 		loadPCUrl(jQuery.Event("click"), document.location.hash);
