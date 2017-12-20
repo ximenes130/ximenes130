@@ -61,6 +61,8 @@ html,body{
 
 .progress{
 	transform: translateY(-14px);
+	opacity: 0;
+	transition: opacity 500ms linear;
 }
 
 .tabs .tab a{

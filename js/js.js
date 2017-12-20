@@ -12,7 +12,7 @@ var loadPC = function(e){
 	loadPCUrl(e,$(this).find('a').attr('href'));
 };
 var loadPCUrl = function(e, url){
-	$('.progress').css('display', 'block');
+	$('.progress').css('opacity', '1');
 	e.preventDefault();
 	$.ajax({
 		type: "GET",
@@ -21,12 +21,12 @@ var loadPCUrl = function(e, url){
 		success: function(data){
 			$('#page-content').html(data);
 			document.location.hash = url;
-			$('.progress').css('display', 'none');
+			$('.progress').css('opacity', '0');
 		},
 		error: function(){
 			$('#page-content').html('<h5>Error 404: Página não encontrada</h5>');
 			document.location.hash = '';
-			$('.progress').css('display', 'none');
+			$('.progress').css('opacity', '0');
 		}
 	});
 };
