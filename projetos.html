@@ -99,5 +99,33 @@
 <script>
 	$(document).ready(function () {
 		$('.modal').modal();
+		$('.chips-autocomplete').material_chip({
+			placeholder: 'Filtro',
+			secondaryPlaceholder: '+Tag',
+			autocompleteOptions: {
+				data: {
+					'Todos': null,
+					'Android': 'img/ico/android.png',
+					'Web': 'img/ico/html5.png',
+					'Educação': 'img/ico/school.png',
+					'java': null,
+					'Python': null,
+					'C#': null
+				},
+				limit: Infinity,
+				minLength: 1
+			}
+		});
+		$('.chips').on('chip.add', function (e, chip) {
+			// you have the added chip here
+		});
+
+		$('.chips').on('chip.delete', function (e, chip) {
+			// you have the deleted chip here
+		});
+
+		$('.chips').on('chip.select', function (e, chip) {
+			// you have the selected chip here
+		});
 	});
 </script>
