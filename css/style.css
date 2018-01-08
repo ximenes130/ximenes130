@@ -89,3 +89,8 @@ html,body{
 .chips .chip.selected {
 	background-color:#42a5f5;
 }
+
+.chip.highlight {
+	background-color: #42a5f5;
+	color: #fff;
+}
