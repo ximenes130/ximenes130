@@ -94,3 +94,6 @@ html,body{
 	background-color: #42a5f5;
 	color: #fff;
 }
+img.hoverable.circle{
+	padding: 5px;
+}

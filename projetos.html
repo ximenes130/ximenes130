@@ -76,7 +76,36 @@
 		for(i in resul){
 			p = resul[i];
 
-			s = '<div class="card"> <div class="card-image"> <img src="'+ p.img +'"> </div> <div class="card-content"> <h5>'+ p.name +'</h5> <p>'+ p.resume +'</p>';
+			s = '<div class="card"> <div class="card-image"> <img src="'+ p.img +'"> </div> <div class="card-content"> <h5>'+ p.name +'</h5> <p>'+ p.resume +'</p><br><p>'
+			
+			for(l in p.links){
+				temp = /:\/\/\w+/.exec(p.links[l]).toString().slice(3)
+				switch (temp) {
+					case 'github':
+						s += '<a href="'+ p.links[l] +'"><img class="hoverable circle" height="40px" src="img/ico/github-circle.svg" alt="github link"></a>'
+						break;
+					case 'drive':
+						s += '<a href="'+ p.links[l] +'"><img class="hoverable circle" height="40px" src="img/ico/google-drive.svg" alt="Google Drive link"></a>'
+						break;
+					case 'facebook':
+						s += '<a href="'+ p.links[l] +'"><img class="hoverable circle" height="40px" src="img/ico/facebook.svg" alt="Facebook link"></a>'
+						break;
+					case 'twitter':
+						s += '<a href="'+ p.links[l] +'"><img class="hoverable circle" height="40px" src="img/ico/twitter.svg" alt="Twitter link"></a>'
+						break;
+					case 'doc':
+					case 'document':
+						s += '<a href="'+ p.links[l] +'"><img class="hoverable circle" height="40px" src="img/ico/file-document.svg" alt="Document link"></a>'
+						break;
+					default:
+						s += '<a href="'+ p.links[l] +'"><img class="hoverable circle" height="40px" src="img/ico/web.svg" alt="Website link"></a>'
+						break;
+				}
+			}
+				
+			
+			
+			s += '</p></div><div class="card-action">';
 			
 			for(t in p.tags)
 				s += '<div class="chip">'+ p.tags[t] +'</div>'
@@ -94,7 +123,7 @@
 			resume: 'Aplicativo para celular destinado à inclusão da terceira idade no meio digital',
 			description: 'A partir da análise de literatura acadêmica e pesquisa de campo, dificuldades e necessidades apresentadas por usuários idosos foram identificadas para o desenvolvimento de um aplicativo Android adaptado às necessidades de usuários com mais de 60 anos. Aplicativo cujas funcionalidades foram validadas a partir de um questionário, aplicado, em conjunto do aplicativo, a 44 pessoas, com idade entre 60 e 77 anos, e escolaridade entre ensino fundamental incompleto e pós-graduação completa.',
 			img: 'img/projetos/appidoso.png',
-			links: {},
+			links: ['http://fontes.pro.br/ideia/getox/HTML/'],
 			members: {
 				'Luiz Eduardo Ximenes Neto': 'ximenes.tk',
 				'Roberto Fontes': 'fontes.pro.br'
@@ -106,7 +135,7 @@
 			resume: 'Nos dias 12, 13 e 14 de junho, o Instituto Federal de Brasília (IFB) campus Taguatinga sediou a I Semana de Ciência e Tecnologia (SC&T). Nessa oportunidade, estudantes, professores e pesquisadores discutiram ideias sobres diversos temas da Automação, Física e Computação. Para isso, o evento reuniu palestras, oficinas, workshops, rodas de conversas, exposições, protótipos de produtos e etc.',
 			description: 'Nos dias 12, 13 e 14 de junho, o Instituto Federal de Brasília (IFB) campus Taguatinga sediou a I Semana de Ciência e Tecnologia (SC&T). Nessa oportunidade, estudantes, professores e pesquisadores discutiram ideias sobres diversos temas da Automação, Física e Computação. Para isso, o evento reuniu palestras, oficinas, workshops, rodas de conversas, exposições, protótipos de produtos e etc.',
 			img: 'img/projetos/sc&t.jpg',
-			links: ['https://github.com/ximenes130/semanacienciaetecnologia'],
+			links: ['https://github.com/ximenes130/semanacienciaetecnologia','https://drive.google.com/ximenes130/semanacienciaetecnologia','https://doc.google.com/ximenes130/semanacienciaetecnologia'],
 			members: {
 				'Luiz Eduardo Ximenes Neto': 'ximenes.tk',
 				'Samuel Novaes': 'megaloft.net'
