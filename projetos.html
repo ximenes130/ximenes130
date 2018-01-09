@@ -40,15 +40,6 @@
 		loadCards();
 	});
 
-	function filterCards() {
-		chips = $('.chips').material_chip('data');
-		
-		for(c in chips){
-			$('.chip:contains("'+ chips[c].tag +'")').parent().parent().toggle();
-		}
-
-	}
-
 	function loadCards(){
 		col = $('.project-col').toArray();
 		chips = $('.chips').material_chip('data');
