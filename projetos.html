@@ -16,16 +16,7 @@
 			placeholder: 'Filtro',
 			secondaryPlaceholder: '+Tag',
 			autocompleteOptions: {
-				data: {
-					'Todos': null,
-					'Android': 'img/ico/android.png',
-					'Web': 'img/ico/html5.png',
-					'Educação': 'img/ico/school.png',
-					'Java': null,
-					'Python': null,
-					'C#': null,
-					'Acessibilidade': null
-				},
+				data: getTags(),
 				limit: Infinity,
 				minLength: 1
 			}
@@ -40,8 +31,15 @@
 		loadCards();
 	});
 
+	// Busca as Tags dos projetos para alimentar a funcão de autocomplete
 	function getTags() {
-		resul
+		resul = {}
+		
+		for(p in projects)
+			for(t in projects[p].tags)
+				resul[projects[p].tags[t]] = null
+		
+		return resul
 	}
 
 	function loadCards(){
