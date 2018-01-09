@@ -74,12 +74,12 @@
 		for(i in resul){
 			p = resul[i];
 
-			s = '<div class="card"> <div class="card-image"> <img src="'+ p.img +'"> </div> <div class="card-content" style="padding-bottom: 5px;"> <h5>'+ p.name +'</h5> <p>'+ p.resume +'</p><br>'
+			s = '<div class="card"> <div class="card-image"> <img src="'+ p.img +'"> </div> <div class="card-content" style="padding-bottom: 5px;"> <h5>'+ p.name +'</h5> <p>'+ p.description +'</p><br>'
 			
 			s += '<span><strong>Integrantes</strong></span>'
 				 
 			for(m in p.members)
-				s += '<a href="'+ p.members[m] +'"><div class="row valign-wrapper hoverable member"><div class="col s2"> <img src="img/Luiz.png" alt="" class="circle responsive-img"></div> <div class="col s10"> <span class="black-text ">'+ m +'</span> </div></div></a>'
+				s += '<a href="'+ p.members[m] +'"><div class="row valign-wrapper hoverable member"><div class="col s2"> <img src="img/members/'+ m +'.png" alt=""  onerror="this.src=\'img/members/default.svg\'" class="circle responsive-img" style="height:auto;width:100%;"></div> <div class="col s10"> <span class="black-text ">'+ m +'</span> </div></div></a>'
 			
 			s +='<div class="center-align">'
 
