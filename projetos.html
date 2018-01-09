@@ -21,11 +21,11 @@
 				minLength: 1
 			}
 		});
-		$('.chips').on('chip.add', function(e, chip){
+		$('.chips').on('chip.add', function (e, chip) {
 			loadCards();
 		});
 
-		$('.chips').on('chip.delete', function(e, chip) {
+		$('.chips').on('chip.delete', function (e, chip) {
 			loadCards();
 		});
 		loadCards();
@@ -34,15 +34,15 @@
 	// Busca as Tags dos projetos para alimentar a funcão de autocomplete
 	function getTags() {
 		resul = {}
-		
-		for(p in projects)
-			for(t in projects[p].tags)
+
+		for (p in projects)
+			for (t in projects[p].tags)
 				resul[projects[p].tags[t]] = null
-		
+
 		return resul
 	}
 
-	function loadCards(){
+	function loadCards() {
 		col = $('.project-col').toArray();
 		chips = $('.chips').material_chip('data');
 		cont = 0
@@ -50,76 +50,76 @@
 		resul = []
 
 		// Limpando area que será repopulada
-		for(c in col)
+		for (c in col)
 			col[c].innerHTML = ''
 
 		// Selecionando quais projetos mostrar
-		if(chips.length == 0)
+		if (chips.length == 0)
 			showAll = true
 		else
-			for(c in chips)
-				if(chips[c].tag == 'Todos')
+			for (c in chips)
+				if (chips[c].tag == 'Todos')
 					showAll = true
-		
-		if(showAll)
+
+		if (showAll)
 			resul = projects
 		else
-			for(c in chips)
-				for(p in projects)
-					for(t in projects[p].tags)
-						if(chips[c].tag == projects[p].tags[t])
+			for (c in chips)
+				for (p in projects)
+					for (t in projects[p].tags)
+						if (chips[c].tag == projects[p].tags[t])
 							resul.push(projects[p])
-		
+
 		// Imprimindo projetos no Documento HTML
-		for(i in resul){
+		for (i in resul) {
 			p = resul[i];
 
-			s = '<div class="card"> <div class="card-image"> <img src="'+ p.img +'"> </div> <div class="card-content" style="padding-bottom: 5px;"> <h5>'+ p.name +'</h5> <p>'+ p.description +'</p><br>'
-			
-			s += '<span><strong>Integrantes</strong></span>'
-				 
-			for(m in p.members)
-				s += '<a href="'+ p.members[m] +'"><div class="row valign-wrapper hoverable member"><div class="col s2"> <img src="img/members/'+ m +'.png" alt=""  onerror="this.src=\'img/members/default.svg\'" class="circle responsive-img" style="height:auto;width:100%;"></div> <div class="col s10"> <span class="black-text ">'+ m +'</span> </div></div></a>'
-			
-			s +='<div class="center-align">'
+			s = '<div class="card"> <div class="card-image"> <img src="' + p.img + '"> </div> <div class="card-content" style="padding-bottom: 5px;"> <h5>' + p.name + '</h5> <p>' + p.description + '</p><br>'
 
-			for(l in p.links){
+			s += '<span><strong>Integrantes</strong></span>'
+
+			for (m in p.members)
+				s += '<a href="' + p.members[m] + '"><div class="row valign-wrapper hoverable member"><div class="col s2"> <img src="img/members/' + m + '.png" alt=""  onerror="this.src=\'img/members/default.svg\'" class="circle responsive-img" style="height:auto;width:100%;"></div> <div class="col s10"> <span class="black-text ">' + m + '</span> </div></div></a>'
+
+			s += '<div class="center-align">'
+
+			for (l in p.links) {
 				temp = /:\/\/\w+/.exec(p.links[l]).toString().slice(3)
 				switch (temp) {
 					case 'github':
-						s += '<a href="'+ p.links[l] +'"><img class="hoverable circle" height="40px" src="img/ico/github-circle.svg" alt="github link"></a>'
+						s += '<a href="' + p.links[l] + '"><img class="hoverable circle" height="40px" src="img/ico/github-circle.svg" alt="github link"></a>'
 						break;
 					case 'drive':
-						s += '<a href="'+ p.links[l] +'"><img class="hoverable circle" height="40px" src="img/ico/google-drive.svg" alt="Google Drive link"></a>'
+						s += '<a href="' + p.links[l] + '"><img class="hoverable circle" height="40px" src="img/ico/google-drive.svg" alt="Google Drive link"></a>'
 						break;
 					case 'facebook':
-						s += '<a href="'+ p.links[l] +'"><img class="hoverable circle" height="40px" src="img/ico/facebook.svg" alt="Facebook link"></a>'
+						s += '<a href="' + p.links[l] + '"><img class="hoverable circle" height="40px" src="img/ico/facebook.svg" alt="Facebook link"></a>'
 						break;
 					case 'twitter':
-						s += '<a href="'+ p.links[l] +'"><img class="hoverable circle" height="40px" src="img/ico/twitter.svg" alt="Twitter link"></a>'
+						s += '<a href="' + p.links[l] + '"><img class="hoverable circle" height="40px" src="img/ico/twitter.svg" alt="Twitter link"></a>'
 						break;
 					case 'doc':
 					case 'document':
-						s += '<a href="'+ p.links[l] +'"><img class="hoverable circle" height="40px" src="img/ico/file-document.svg" alt="Document link"></a>'
+						s += '<a href="' + p.links[l] + '"><img class="hoverable circle" height="40px" src="img/ico/file-document.svg" alt="Document link"></a>'
 						break;
 					default:
-						s += '<a href="'+ p.links[l] +'"><img class="hoverable circle" height="40px" src="img/ico/web.svg" alt="Website link"></a>'
+						s += '<a href="' + p.links[l] + '"><img class="hoverable circle" height="40px" src="img/ico/web.svg" alt="Website link"></a>'
 						break;
 				}
 			}
-				
-			
-			
+
+
+
 			s += '</div></div><div class="card-action">';
-			
-			for(t in p.tags)
-				s += '<div class="chip">'+ p.tags[t] +'</div>'
-			
+
+			for (t in p.tags)
+				s += '<div class="chip">' + p.tags[t] + '</div>'
+
 			s += '</div> </div>';
 
-			col[cont % resul.length].innerHTML +=s;
+			col[cont % resul.length].innerHTML += s;
 			cont++;
-		} 
+		}
 	}
 
 	projects = [
