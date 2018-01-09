@@ -97,3 +97,6 @@ html,body{
 img.hoverable.circle{
 	padding: 5px;
 }
+a .row.member{
+	margin-bottom: 5px;
+}
