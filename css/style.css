@@ -101,3 +101,7 @@ img.hoverable.circle{
 a .row.member{
 	margin-bottom: 5px;
 }
+
+blockquote{
+	border-left: 5px solid #42a5f5;
+}
