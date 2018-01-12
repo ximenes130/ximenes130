@@ -158,7 +158,8 @@ anim();
 window.addEventListener( 'resize', function() {
 
 w = rainbowlines.width = window.innerWidth;
-h = rainbowlines.height = window.innerHeight;
+h = rainbowlines.height = window.innerHeight * 0.9;
+$('.header .content').css('height', rainbowlines.height);
 starter.x = w / 2;
 starter.y = h / 2;
 
