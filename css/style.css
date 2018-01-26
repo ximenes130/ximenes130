@@ -104,4 +104,9 @@ a .row.member{
 
 blockquote{
 	border-left: 5px solid #42a5f5;
+	text-align: justify;
+}
+
+.card .card-content p{
+    text-align: justify;
 }
